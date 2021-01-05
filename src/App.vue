@@ -2,6 +2,7 @@
   <div id="app">
     <p><b>Employees</b>: <i>https://jsonplaceholder.typicode.com/users</i></p>
     <p><b>Cards</b>: <i>https://jsonplaceholder.typicode.com/photos</i></p>
+    <p><b>MEME</b>: <i>http://apimeme.com/?ref=apilist.fun</i></p>
     <!-- <p><b>Star Wars</b>: <i>https://swapi.py4e.com/api/people/</i></p> -->
     <employee-list />
     <cards />
@@ -9,11 +10,6 @@
 
     <h1>meme</h1>
     <meme />
-    <p class="note">
-      dropdown of all the meme types and then textboxes to write the text for
-      the meme
-    </p>
-    <p class="note"><b>From</b>: <i>http://apimeme.com/?ref=apilist.fun</i></p>
   </div>
 </template>
 
@@ -21,7 +17,7 @@
 import EmployeeList from "@/components/EmployeeList";
 import Cards from "@/components/Cards";
 // import StarWars from "@/components/StarWars";
-import Meme from "@/components/Meme"
+import Meme from "@/components/Meme";
 
 export default {
   data() {
@@ -37,7 +33,7 @@ export default {
 };
 </script>
 
-<style lang = scss>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
