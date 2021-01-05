@@ -8,6 +8,7 @@
     <!-- <star-wars /> -->
 
     <h1>meme</h1>
+    <meme />
     <p class="note">
       dropdown of all the meme types and then textboxes to write the text for
       the meme
@@ -20,6 +21,7 @@
 import EmployeeList from "@/components/EmployeeList";
 import Cards from "@/components/Cards";
 // import StarWars from "@/components/StarWars";
+import Meme from "@/components/Meme"
 
 export default {
   data() {
@@ -30,6 +32,7 @@ export default {
     // StarWars,
     Cards,
     EmployeeList,
+    Meme,
   },
 };
 </script>
