@@ -19,32 +19,30 @@
         </tr>
       </table>
     </div>
-
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import axios from 'axios';
-import VueAxios from 'vue-axios';
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
 
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios, axios);
 
 export default {
   name: "EmployeeList",
   data() {
     return {
       list: undefined,
-    }
+    };
   },
   mounted() {
-    Vue.axios.get("https://jsonplaceholder.typicode.com/users")
-        .then((resp) => {
-          this.list = resp.data;
-          console.log(resp.data);
-        })
-  }
-}
+    Vue.axios.get("https://jsonplaceholder.typicode.com/users").then((resp) => {
+      this.list = resp.data;
+      console.log(resp.data);
+    });
+  },
+};
 </script>
 
 <style scoped lang="scss">

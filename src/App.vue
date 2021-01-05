@@ -1,22 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p><b>Employees</b>: <i>https://jsonplaceholder.typicode.com/users</i></p>
+    <p><b>Cards</b>: <i>https://jsonplaceholder.typicode.com/photos</i></p>
+    <!-- <p><b>Star Wars</b>: <i>https://swapi.py4e.com/api/people/</i></p> -->
+    <employee-list />
+    <cards />
+    <!-- <star-wars /> -->
+
+    <h1>meme</h1>
+    <p class="note">
+      dropdown of all the meme types and then textboxes to write the text for
+      the meme
+    </p>
+    <p class="note"><b>From</b>: <i>http://apimeme.com/?ref=apilist.fun</i></p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import EmployeeList from "@/components/EmployeeList";
+import Cards from "@/components/Cards";
+// import StarWars from "@/components/StarWars";
 
 export default {
-  name: 'App',
+  data() {
+    return {};
+  },
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    // StarWars,
+    Cards,
+    EmployeeList,
+  },
+};
 </script>
 
-<style>
+<style lang = scss>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,5 +42,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  .note {
+    color: red;
+  }
 }
 </style>

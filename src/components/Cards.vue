@@ -6,19 +6,18 @@
     <div class="content">
       <div class="card" v-for="item in list" v-bind:key="item.id">
         <div class="img">
-          <img :src="item.thumbnailUrl" alt="">
+          <img :src="item.thumbnailUrl" alt="" />
         </div>
         <div class="title">
           {{ item.title }}
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
+import Vue from "vue";
 import axios from "axios";
 import VueAxios from "vue-axios";
 
@@ -27,16 +26,17 @@ Vue.use(VueAxios, axios);
 export default {
   name: "Cards",
   data() {
-    return {list: undefined}
+    return { list: undefined };
   },
   mounted() {
-    Vue.axios.get("https://jsonplaceholder.typicode.com/photos")
-        .then((resp) => {
-          this.list = resp.data.slice(0,10);
-          console.log(this.list);
-        })
-  }
-}
+    Vue.axios
+      .get("https://jsonplaceholder.typicode.com/photos")
+      .then((resp) => {
+        this.list = resp.data.slice(0, 8);
+        console.log(this.list);
+      });
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -58,6 +58,4 @@ export default {
     }
   }
 }
-
-
 </style>
